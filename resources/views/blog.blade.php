@@ -9,11 +9,11 @@
 <body>
     <h1>Blog Page</h1>
     <br>
-    <input type="text" name="text" placeholder="題名を入力してください。">
+    <input type="text" name="title" placeholder="題名を入力してください。">
     </br>
 
     <br>
-    <textarea name="tarea3" cols="30" rows="3" maxlength="1000" 
+    <textarea name="post" cols="30" rows="3" maxlength="1000" 
     placeholder="投稿してください。"></textarea>
     </br>
 
