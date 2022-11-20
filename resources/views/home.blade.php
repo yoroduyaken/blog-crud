@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>Welcome to Home</h1>
+
+    <a href="{{ route('blog') }}">投稿する</a>
 </body>
 </html>
