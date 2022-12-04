@@ -15,8 +15,10 @@ use App\Http\Controllers\BlogController;
 |
 */
 
+// welcome.blade.phpを削除しました。
+
 Route::get('/', function () {
-    return view('top');
+    return view('top'); 
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home'); 
