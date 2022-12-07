@@ -7,6 +7,8 @@
     <title>Blog</title>
 </head>
 <body>
+    <form action="{{ route('blog') }}"  method="post">
+        {{ csrf_field() }}
     <h1>Blog Page</h1>
     <br>
     <input type="text" name="title" placeholder="題名を入力してください。">
@@ -17,5 +19,7 @@
     placeholder="投稿してください。"></textarea>
     </br>
 
+    <button type="submit">投稿</button>
+    </form>
 </body>
 </html>
