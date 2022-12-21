@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\BlogsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +26,4 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', [BlogController::class, 'create'])->name('blog');
 Route::post('/blog', [BlogController::class, 'store']); 
 
-Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
