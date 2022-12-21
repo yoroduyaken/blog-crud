@@ -20,7 +20,7 @@
             @foreach ($blogs as $blog)
             <tr>
                 <td>{{ $blog->title }}</td>
-                <td>¥{{ $blog->body }}</td>
+                <td>{{ $blog->body }}</td>
                 <td>{{ $blog->created_at }}</td>
             </tr>
             @endforeach
