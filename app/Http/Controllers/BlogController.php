@@ -27,4 +27,10 @@ class BlogController extends Controller
 
         return redirect()->route('blog');
     }
+
+    public function show($id)
+    {
+        $blog = Blog::find($id);
+        return view('show',compact('blog'));
+    }
 }
