@@ -14,12 +14,10 @@
         <br>
             <input type="text" name="title" placeholder="題名を入力してください。"
             value="{{ old('title', $blog->title) }}">
-        </br>
 
         <br>
         <textarea name="body" cols="30" rows="3" maxlength="1000" 
             placeholder="投稿してください。" value="{{ old('body', $blog->body) }}"></textarea>
-        </br>
 
         <button type="submit">編集</button>
     </form>
