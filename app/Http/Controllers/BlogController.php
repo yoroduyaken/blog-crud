@@ -33,4 +33,10 @@ class BlogController extends Controller
         $blog = Blog::find($id);
         return view('show',compact('blog'));
     }
+
+    public function edit($id)
+    {
+        $blog = Blog::find($id);
+        return view('edit',compact('blog'));
+    }
 }
