@@ -15,7 +15,7 @@
     </br>
 
     <br>
-    <textarea name="post" cols="30" rows="3" maxlength="1000" 
+    <textarea name="body" cols="30" rows="3" maxlength="1000" 
     placeholder="投稿してください。"></textarea>
     </br>
 

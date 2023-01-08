@@ -15,7 +15,7 @@ class BlogsController extends Controller
     
     public function show($blog)
     {
-        $blog = Blog::find(1);
-        return view('blogs.show', ['blogs' => Blog::find($blog)]);
+        $blog = Blog::where('id');
+        return view('blogs.show', ['blogs' => Blog::where($blog)]);
     }
 }
