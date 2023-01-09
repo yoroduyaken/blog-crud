@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Blog Edit Page</h1>
-    <form action="{{ route('blogs.update', $blog) }}"  method="post">
+    <form action="{{ route('blogs.edit', $blog) }}"  method="post">
         {{ csrf_field() }}
 
         <br>
