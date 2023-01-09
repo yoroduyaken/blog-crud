@@ -31,6 +31,4 @@ Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('blogs.show');
 
 Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
-
-Route::get('/blogs/{id}/update', [BlogController::class, 'update'])->name('blogs.update');
-Route::post('/blogs/{id}/update', [BlogController::class, 'update'])->name('blogs.update');
+Route::post('/blogs/{id}/edit', [BlogController::class, 'update']);
