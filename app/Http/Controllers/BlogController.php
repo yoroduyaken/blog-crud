@@ -49,6 +49,13 @@ class BlogController extends Controller
         ]);
 
         return redirect()->route('blog');
+    }
 
+    public function destroy($id)
+    {
+        $blog = Blog::find($id);
+        $blog->delete();
+
+        return redirect()->route('blog');
     }
 }
