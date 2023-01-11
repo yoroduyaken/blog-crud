@@ -19,7 +19,7 @@
             <td>{{ $blog->created_at }}</td>
         </tr>
     </table>
-
+    
 </body>
 
 </html>
