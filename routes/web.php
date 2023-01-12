@@ -33,5 +33,4 @@ Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('blogs.show');
 Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
 Route::post('/blogs/{id}/edit', [BlogController::class, 'update']);
 
-Route::get('/blogs/{id}/delete', [BlogController::class, 'index'])->name('blogs.delete');
 Route::post('/blogs/{id}/delete', [BlogController::class, 'destroy']);
