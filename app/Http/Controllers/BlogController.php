@@ -52,10 +52,13 @@ class BlogController extends Controller
 
     }
 
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         $blog = Blog::find($id);
-        $blog->delete();
+        $blog->delete([
+            "title" => $request->title,
+            "body" => $request->body,
+        ]);
 
         return redirect()->route('blog');
     }
