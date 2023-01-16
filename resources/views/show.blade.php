@@ -20,6 +20,11 @@
         </tr>
     </table>
 
+    <form action="{{ route('blogs.delete', $blog) }}" method="post">
+        {{ csrf_field() }}
+        <button type="submit">削除</button>
+    </form>
+
 </body>
 
 </html>
