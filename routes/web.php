@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,5 @@ Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edi
 Route::post('/blogs/{id}/edit', [BlogController::class, 'update']);
 
 Route::post('/blogs/{id}/delete', [BlogController::class, 'destroy'])->name('blogs.delete');
+
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
