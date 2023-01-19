@@ -37,3 +37,4 @@ Route::post('/blogs/{id}/edit', [BlogController::class, 'update']);
 Route::post('/blogs/{id}/delete', [BlogController::class, 'destroy'])->name('blogs.delete');
 
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
