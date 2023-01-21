@@ -19,7 +19,8 @@ class LoginController extends Controller
             'password' => 'required|string|min:8',
        ]);
 
-        if (!auth()->attempt($request->only('email', 'password'))) {
+        if (!auth()->attempt($request->only('email', 'password'))) 
+        {
             return redirect()->back();
         } 
 
