@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -11,8 +12,18 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function authenticate()
+    public function authenticate(Request $request)
     {
-        return view('home');
+        $request->validate([
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:8',
+       ]);
+
+        if (!auth()->attempt($request->only('email', 'password'))) {
+            return redirect()->back();
+        } 
+
+        $request->session()->regenerate();    
+        return redirect()->route('home');
     }
 }
