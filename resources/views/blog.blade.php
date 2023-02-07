@@ -9,17 +9,14 @@
 <body>
     <form action="{{ route('blog') }}"  method="post">
         {{ csrf_field() }}
-    <h1>Blog Page</h1>
-    <br>
-    <input type="text" name="title" placeholder="題名を入力してください。">
-    </br>
+        <h1>Blog Page</h1>
+        <br>
+        <input type="text" name="title" placeholder="題名を入力してください。">
 
-    <br>
-    <textarea name="body" cols="30" rows="3" maxlength="1000" 
-    placeholder="投稿してください。"></textarea>
-    </br>
+        <br>
+        <textarea name="body" cols="30" rows="3" maxlength="1000" placeholder="投稿してください。"></textarea>
 
-    <button type="submit">投稿</button>
+        <button type="submit">投稿</button>
     </form>
 </body>
 </html>

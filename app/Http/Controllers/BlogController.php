@@ -45,22 +45,31 @@ class BlogController extends Controller
     public function update(Request $request, $id)
     {
         $blog = Blog::find($id);
-        $blog->update([
-            "title" => $request->title,
-            "body" => $request->body,
-        ]);
+
+        if (Auth::id() === $blog->user_id) {
+            $blog->update([
+                "title" => $request->title,
+                "body" => $request->body,
+            ]);
+        } else {
+            abort(403);
+        }
+        
 
         return redirect()->route('blog');
 
     }
 
-    public function destroy(Request $request, $id)
+    public function destroy($id)
     {
         $blog = Blog::find($id);
-        $blog->delete([
-            "title" => $request->title,
-            "body" => $request->body,
-        ]);
+
+        if (Auth::id() === $blog->user_id) {
+            $blog->delete();
+
+        } else {
+            abort(403);
+        }
 
         return redirect()->route('blog');
     }
