@@ -8,18 +8,14 @@
 </head>
 <body>
     <h1>Blog Edit Page</h1>
-    <form action="{{ route('blogs.edit', $blog) }}"  method="post">
+    <form action="{{ route('blogs.edit', $blog->id) }}"  method="post">
         {{ csrf_field() }}
 
         <br>
-            <input type="text" name="title" placeholder="題名を入力してください。"
-            value="{{ old('title', $blog->title) }}">
-
+        <input type="text" name="title" placeholder="題名を入力してください。" value="{{ old('title', $blog->title) }}"> 
         <br>
-        <textarea name="body" cols="30" rows="3" maxlength="1000" 
-            placeholder="投稿してください。" value="{{ old('body', $blog->body) }}"></textarea>
-
-        <button type="submit">編集</button>
+        <textarea name="body" cols="30" rows="3" maxlength="1000" placeholder="投稿してください。">{{ old('body', $blog->body) }}</textarea>
+        <button type="submit">更新</button>
     </form>
 </body>
 </html>
