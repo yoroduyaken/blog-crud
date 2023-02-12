@@ -20,9 +20,14 @@
         </tr>
     </table>
 
+    <form action="{{ route('blogs.edit',$blog->id) }}" method="get">
+        {{ csrf_field() }}
+        <button type="submit">編集する</button>
+    </form>
+
     <form action="{{ route('blogs.delete', $blog->id) }}" method="post">
         {{ csrf_field() }}
-        <button type="submit">削除</button>
+        <button type="submit">削除する</button>
     </form>
 
 </body>
