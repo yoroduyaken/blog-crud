@@ -10,5 +10,10 @@
     <h1>Welcome to Home</h1>
 
     <a href="{{ route('blog') }}">投稿する</a>
+    
+    <form action="{{ route('logout') }}" method="post">
+        {{ csrf_field() }}
+        <button type="submit">ログアウトする</button>
+    </form>
 </body>
 </html>
