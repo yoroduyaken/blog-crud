@@ -13,7 +13,7 @@ class LoginController extends Controller
     }
 
     public function authenticate(Request $request)
-    {
+    {    
         $request->validate([
             'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:8',
@@ -26,5 +26,13 @@ class LoginController extends Controller
 
         $request->session()->regenerate();    
         return redirect()->route('home');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
     }
 }
