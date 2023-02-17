@@ -13,7 +13,7 @@ class LoginController extends Controller
     }
 
     public function authenticate(Request $request)
-    {  
+    {
         $request->validate([
             'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:8',
