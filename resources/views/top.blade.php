@@ -8,5 +8,15 @@
 </head>
 <body>
     <h1>This is Top</h1>
+
+    <form action="{{ route('login') }}" method="get">
+        {{ csrf_field() }}
+        <button type="submit">ログインする</button>
+    </form>
+
+    <form action="{{ route('register') }}" method="get">
+        {{ csrf_field() }}
+        <button type="submit">会員登録する</button>
+    </form>
 </body>
 </html>
