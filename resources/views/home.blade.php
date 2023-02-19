@@ -15,5 +15,16 @@
         {{ csrf_field() }}
         <button type="submit">ログアウトする</button>
     </form>
+
+    <form action="{{ route('blog') }}" method="get">
+        {{ csrf_field() }}
+        <button type="submit">投稿する</button>
+    </form>
+
+    <form action="{{ route('blogs') }}" method="get">
+        {{ csrf_field() }}
+        <button type="submit">一覧を見る</button>
+    </form>
+    
 </body>
 </html>
