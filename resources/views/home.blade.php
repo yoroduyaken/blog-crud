@@ -15,5 +15,9 @@
         {{ csrf_field() }}
         <button type="submit">ログアウトする</button>
     </form>
+
+    <button onclick="location.href='{{ route('blog') }}'">投稿する</button>
+
+    <button onclick="location.href='{{ route('blogs') }}'">一覧を見る</button>
 </body>
 </html>
