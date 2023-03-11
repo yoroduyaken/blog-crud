@@ -18,8 +18,8 @@ class BlogFactory extends Factory
     public function definition()
     {
         return [
-            'title' => fake()->title(),
-            'body' => fake()->unique()->text(20),
+            'title' => fake()->sentence(3),
+            'body' => fake()->paragraph(),
             'user_id' => User::first()->id,
         ];
     }
