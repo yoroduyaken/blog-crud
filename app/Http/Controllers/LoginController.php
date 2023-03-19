@@ -7,11 +7,18 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
+    /**
+     * ログイン画面を表示する。
+     */
     public function login()
     {
         return view('login');
     }
 
+    /**
+     * 登録したユーザーをログインさせる。
+     */
     public function authenticate(Request $request)
     {
         $request->validate([
@@ -28,6 +35,9 @@ class LoginController extends Controller
         return redirect()->route('home');
     }
 
+    /**
+     * ログインしているユーザーをログアウトさせる。
+     */
     public function logout(Request $request)
     {
         Auth::logout();
