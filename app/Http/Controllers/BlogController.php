@@ -8,12 +8,18 @@ use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
+    /**
+     * ブログの一覧を表示する。
+     */
     public function index()
     {
         $blogs = Blog::all();
         return view('blogs',compact('blogs'));
     }
-
+    
+    /**
+     * ブログの新規作成画面を表示する。
+     */
     public function create()
     {
         return view('blog');
