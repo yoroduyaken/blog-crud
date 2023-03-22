@@ -11,18 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-
-    /**
-     * 登録画面を表示する。
-     */
     public function register()
     {
         return view('register');
     }
 
-    /**
-     *新規ユーザーを登録後、メール確認をする。 
-     */
     public function store(Request $request)
     {
         $request->validate([
