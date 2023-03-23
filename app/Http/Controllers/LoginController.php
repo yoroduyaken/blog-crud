@@ -14,6 +14,7 @@ class LoginController extends Controller
     {
         return view('login');
     }
+
     /**
      * 登録したユーザーをログインさせる。
      */
@@ -32,6 +33,7 @@ class LoginController extends Controller
         $request->session()->regenerate();    
         return redirect()->route('home');
     }
+    
     /**
      * 登録したユーザーをログアウトさせる。
      */

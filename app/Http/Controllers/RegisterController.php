@@ -16,7 +16,8 @@ class RegisterController extends Controller
     public function register()
     {
         return view('register');
-    }   
+    }
+       
     /**
      * 新規ユーザーを登録する。
      */

@@ -16,6 +16,7 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('blogs',compact('blogs'));
     }
+
     /**
      * ブログの新規作成画面を表示する。
      */
@@ -23,6 +24,7 @@ class BlogController extends Controller
     {
         return view('blog');
     }
+
     /**
      * ブログを新規投稿する。
      */
@@ -36,6 +38,7 @@ class BlogController extends Controller
 
         return redirect()->route('blog');
     }
+
     /**
      * 投稿したブログの一覧を表示する。
      */
@@ -44,6 +47,7 @@ class BlogController extends Controller
         $blog = Blog::find($id);
         return view('show',compact('blog'));
     }
+
     /**
      * 投稿したブログを編集する。
      */
@@ -52,6 +56,7 @@ class BlogController extends Controller
         $blog = Blog::find($id);
         return view('edit',compact('blog'));
     }
+
     /**
      * 投稿したブログを更新する。
      */
@@ -70,6 +75,7 @@ class BlogController extends Controller
 
         return redirect()->route('blog');
     }
+    
     /**
      * 投稿したブログを削除する。
      */
