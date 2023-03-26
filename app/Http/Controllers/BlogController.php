@@ -26,6 +26,9 @@ class BlogController extends Controller
         return view('blog');
     }
 
+    /**
+     * ブログを新規投稿する。
+     */
     public function store(Request $request)
     {
         Blog::create([
@@ -37,18 +40,27 @@ class BlogController extends Controller
         return redirect()->route('blog');
     }
 
+    /**
+     * 投稿したブログの一覧を表示する。
+     */
     public function show($id)
     {
         $blog = Blog::find($id);
         return view('show',compact('blog'));
     }
 
+    /**
+     * 投稿したブログを編集する。
+     */
     public function edit($id)
     {
         $blog = Blog::find($id);
         return view('edit',compact('blog'));
     }
 
+    /**
+     * 投稿したブログを更新する。
+     */
     public function update(Request $request, $id)
     {
         $blog = Blog::find($id);
@@ -64,7 +76,10 @@ class BlogController extends Controller
         
         return redirect()->route('blog');
     }
-
+    
+    /**
+     * 投稿したブログを削除する。
+     */
     public function destroy($id)
     {
         $blog = Blog::find($id);
