@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
+    
     /**
      * ブログの一覧を表示する。
      */
@@ -72,7 +73,7 @@ class BlogController extends Controller
         } else {
             abort(403);
         }
-
+        
         return redirect()->route('blog');
     }
     
